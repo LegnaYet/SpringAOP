@@ -18,15 +18,15 @@ import com.springAOP.pojo.po.Student;
 public class StudentDaoImpl implements IStudentDao{
 
 	public void saveStu() {
-		System.out.println("增加学生");
+		
 	}
 
 	public void delStu() {
-		System.out.println("增加学生");
+		
 	}
 
 	public void updateStu() {
-		System.out.println("修改学生");
+		
 	}
 	
 	public List<Student> getAllStudent(){

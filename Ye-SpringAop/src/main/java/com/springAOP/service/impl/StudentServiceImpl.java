@@ -26,7 +26,8 @@ public class StudentServiceImpl implements IStudentService{
 	}
 
 	public void delStu() {
-		System.out.println("增加学生");
+		Integer.parseInt("abc");
+		System.out.println("删除学生");
 	}
 
 	public void updateStu() {
