@@ -1,6 +1,5 @@
 package com.springAOP.test;
 
-import java.util.List;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -8,28 +7,37 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.springAOP.dao.IStudentDao;
-import com.springAOP.dao.impl.StudentDaoImpl;
 import com.springAOP.pojo.po.Student;
 import com.springAOP.service.IStudentService;
 
-//创建容器
 @RunWith(SpringJUnit4ClassRunner.class)
-//指定创建容器时使用哪个配置文件
-@ContextConfiguration("classpath:applicationContext-aop.xml")
-public class testDemo2 {
+@ContextConfiguration("classpath:applicationContext-jdbc.xml")
+public class testDemo3 {
 
 	@Autowired
 	IStudentService stuService; 
+	
 	@Test
 	public void test1(){
-		Student student = new Student();
-		stuService.saveStu(student );//无异常
+		 Student student = new Student();
+		 student.setSid("100");
+		 student.setSname("admin");
+		 stuService.saveStu(student);
 	}
 	
 	@Test
 	public void test2(){
-		String sid = "1";
-		stuService.delStu(sid);//有异常
+		String sid = "100";
+		stuService.delStu(sid);
 	}
+	
+	@Test
+	public void test3(){
+		 Student student = new Student();
+		 student.setSid("4");
+		 student.setSname("admin");
+		stuService.updateStu(student);
+	}
+	
+	
 }

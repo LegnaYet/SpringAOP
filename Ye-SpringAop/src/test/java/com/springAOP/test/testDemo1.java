@@ -15,7 +15,7 @@ import com.springAOP.pojo.po.Student;
 //创建容器
 @RunWith(SpringJUnit4ClassRunner.class)
 //指定创建容器时使用哪个配置文件
-@ContextConfiguration("classpath:applicationContext.xml")
+@ContextConfiguration(locations = "classpath:applicationContext.xml")
 public class testDemo1 {
 
 	@Autowired

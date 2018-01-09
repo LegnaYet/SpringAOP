@@ -6,8 +6,9 @@ import com.springAOP.pojo.po.Student;
 
 public interface IStudentService {
 
-	public void saveStu();
-	public void delStu();
-	public void updateStu();
+	public void saveStu(Student student);
+	public void delStu(String sid);
+	public void updateStu(Student student);
+	List<Student> selectAll();
 	List<Student> getAllStudent();
 }
