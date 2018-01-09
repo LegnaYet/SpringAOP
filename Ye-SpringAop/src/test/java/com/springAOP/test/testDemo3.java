@@ -15,7 +15,7 @@ import com.springAOP.service.IStudentService;
 public class testDemo3 {
 
 	@Autowired
-	IStudentService stuService; 
+	private IStudentService stuService; 
 	
 	@Test
 	public void test1(){

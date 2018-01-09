@@ -44,5 +44,5 @@
         <bean name="studentDaoImpl" class="com.springAOP.dao.impl.StudentDaoImpl">
             <property name="jdbcTemplate" ref="jdbcTemplate"/>
         </bean>
-  
+     
 </beans>  
